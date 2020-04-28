@@ -3,13 +3,14 @@ pipeline{
     tools {
         go {go}
         }
-    stages{
-        stage{'Build'} { 
+
+    stages {
+        stage('Build') { 
             steps{
                 sh 'go build'
             }
         }        
-        stage{'Publish artefact'} {
+        stage('Publish artefact') {
             steps{
                 archiveArtifacts 'exaple1'
             }
