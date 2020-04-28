@@ -12,7 +12,7 @@ pipeline{
         }        
         stage('Publish artefact') {
             steps{
-                archiveArtifacts 'go build'
+                archiveArtifacts 'go_build'
             }
         }
     }
