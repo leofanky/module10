@@ -12,7 +12,7 @@ pipeline{
         }        
         stage('Publish artefact') {
             steps{
-                archiveArtifacts 'multygo'
+                archiveArtifacts 'multygo_master'
             }
         }
     }
