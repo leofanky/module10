@@ -3,8 +3,12 @@ pipeline{
     tools {
         go {'go'}
         }
-
     stages {
+        stage('set go env') { 
+            steps{
+                sh 'go env -w CGO_ENABLED=0'
+            }
+        }        
         stage('test') { 
             steps{
                 sh 'go test'
