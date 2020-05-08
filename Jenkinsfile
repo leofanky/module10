@@ -5,6 +5,11 @@ pipeline{
         }
 
     stages {
+        stage('test') { 
+            steps{
+                sh 'go test'
+            }
+        }        
         stage('Build') { 
             steps{
                 sh 'go build'
